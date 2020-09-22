@@ -1,0 +1,10 @@
+N:\Pobrane\kurumi-master\kurumi-master\bin\Debug\Kurumi.exe.config
+N:\Pobrane\kurumi-master\kurumi-master\bin\Debug\Kurumi.exe
+N:\Pobrane\kurumi-master\kurumi-master\bin\Debug\Kurumi.pdb
+N:\Pobrane\kurumi-master\kurumi-master\obj\Debug\Kurumi.csprojAssemblyReference.cache
+N:\Pobrane\kurumi-master\kurumi-master\obj\Debug\Kurumi.KurumiForm.resources
+N:\Pobrane\kurumi-master\kurumi-master\obj\Debug\Kurumi.Properties.Resources.resources
+N:\Pobrane\kurumi-master\kurumi-master\obj\Debug\Kurumi.csproj.GenerateResource.cache
+N:\Pobrane\kurumi-master\kurumi-master\obj\Debug\Kurumi.csproj.CoreCompileInputs.cache
+N:\Pobrane\kurumi-master\kurumi-master\obj\Debug\Kurumi.exe
+N:\Pobrane\kurumi-master\kurumi-master\obj\Debug\Kurumi.pdb

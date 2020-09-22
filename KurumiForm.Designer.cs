@@ -33,6 +33,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnFix = new System.Windows.Forms.Button();
             this.oskLink = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.activityIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,8 @@
             this.topLabel.Name = "topLabel";
             this.topLabel.Size = new System.Drawing.Size(524, 28);
             this.topLabel.TabIndex = 1;
-            this.topLabel.Text = "Obtaining network time...";
+            this.topLabel.Text = "Ładowanie czasu serwera...";
+            this.topLabel.Click += new System.EventHandler(this.topLabel_Click);
             // 
             // ownClock
             // 
@@ -78,7 +81,7 @@
             this.lblOT.Padding = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblOT.Size = new System.Drawing.Size(116, 27);
             this.lblOT.TabIndex = 3;
-            this.lblOT.Text = "Own time";
+            this.lblOT.Text = "Twój czas";
             // 
             // serverClock
             // 
@@ -91,7 +94,7 @@
             this.serverClock.Name = "serverClock";
             this.serverClock.Size = new System.Drawing.Size(520, 51);
             this.serverClock.TabIndex = 4;
-            this.serverClock.Text = "Obtaining...";
+            this.serverClock.Text = "Ładowanie...";
             this.serverClock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblST
@@ -105,7 +108,7 @@
             this.lblST.Padding = new System.Windows.Forms.Padding(0, 3, 3, 0);
             this.lblST.Size = new System.Drawing.Size(116, 27);
             this.lblST.TabIndex = 5;
-            this.lblST.Text = "Network time";
+            this.lblST.Text = "Czas serwera";
             this.lblST.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Difference
@@ -120,7 +123,7 @@
             this.Difference.Padding = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.Difference.Size = new System.Drawing.Size(280, 23);
             this.Difference.TabIndex = 6;
-            this.Difference.Text = "Obtaining...";
+            this.Difference.Text = "Ładowanie...";
             this.Difference.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnExit
@@ -132,7 +135,7 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(279, 41);
             this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "&Exit";
+            this.btnExit.Text = "&Wyjdź";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -146,7 +149,7 @@
             this.btnFix.Name = "btnFix";
             this.btnFix.Size = new System.Drawing.Size(278, 41);
             this.btnFix.TabIndex = 1;
-            this.btnFix.Text = "&Fix";
+            this.btnFix.Text = "&Napraw";
             this.btnFix.UseVisualStyleBackColor = true;
             this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
             // 
@@ -156,7 +159,7 @@
             this.oskLink.AutoSize = true;
             this.oskLink.Font = new System.Drawing.Font("MS PGothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oskLink.LinkColor = System.Drawing.SystemColors.Highlight;
-            this.oskLink.Location = new System.Drawing.Point(16, 171);
+            this.oskLink.Location = new System.Drawing.Point(542, 26);
             this.oskLink.Name = "oskLink";
             this.oskLink.Size = new System.Drawing.Size(34, 11);
             this.oskLink.TabIndex = 9;
@@ -165,6 +168,25 @@
             this.oskLink.VisitedLinkColor = System.Drawing.SystemColors.Highlight;
             this.oskLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.oskLink_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS PGothic", 8.25F);
+            this.label1.Location = new System.Drawing.Point(540, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 11);
+            this.label1.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS PGothic", 8.25F);
+            this.label2.Location = new System.Drawing.Point(390, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(186, 11);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Tłumaczenie zrobione przez NISZOgen";
+            // 
             // KurumiForm
             // 
             this.AcceptButton = this.btnFix;
@@ -172,6 +194,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(588, 249);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.oskLink);
             this.Controls.Add(this.btnFix);
             this.Controls.Add(this.btnExit);
@@ -207,5 +231,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnFix;
         private System.Windows.Forms.LinkLabel oskLink;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

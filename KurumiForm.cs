@@ -23,9 +23,9 @@ namespace Kurumi {
         }
         private void ObtainTime(bool wasFixed, TimeSpan originalOffset) {
             activityIcon.Image = Properties.Resources.waiting;
-            topLabel.Text = "Obtaining network time...";
-            Difference.Text = "Obtaining...";
-            serverClock.Text = "Obtaining...";
+            topLabel.Text = "Ładowanie serwerowego czasu...";
+            Difference.Text = "Ładowanie...";
+            serverClock.Text = "Ładowanie...";
             ownClock.Text = DateTime.Now.ToLongTimeString();
             btnFix.Enabled = false;
 
@@ -37,7 +37,7 @@ namespace Kurumi {
                 net = Program.TryGetNetworkTime();
             } catch {
                 activityIcon.Image = Properties.Resources.error;
-                topLabel.Text = "Could not connect to time server";
+                topLabel.Text = "Nie mogę podłączyć się do serwera";
                 Difference.Text = "???";
                 serverClock.Text = "???";
                 return;
@@ -65,9 +65,9 @@ namespace Kurumi {
             } else {
                 if (!wasFixed) {
                     activityIcon.Image = Properties.Resources.exact;
-                    topLabel.Text = "Your clock is exact!";
+                    topLabel.Text = "Twój zegar jest ustawiony poprawnie!";
                 } else {
-                    topLabel.Text = "Your clock is now exact!";
+                    topLabel.Text = "Twój zegar jest już ustawiony poprawnie!";
 
                     if (originalOffset.TotalSeconds <= -1) {
                         activityIcon.Image = Properties.Resources.behind_fixed;
@@ -125,6 +125,11 @@ namespace Kurumi {
 
         private void oskLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             System.Diagnostics.Process.Start("https://osk.sh/");
+        }
+
+        private void topLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
